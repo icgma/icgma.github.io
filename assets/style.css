@@ -83,8 +83,7 @@ body.en .len{display:inline;}
 section.block{padding:clamp(40px,5.5vw,60px) 0 6px;}
 .sect-head{
   display:flex;align-items:baseline;gap:14px;
-  border-top:2.5px solid var(--ink);
-  padding-top:10px;margin-bottom:24px;
+  padding-top:6px;margin-bottom:24px;
 }
 .sect-head .zh{font-size:clamp(19px,2.4vw,23px);font-weight:900;letter-spacing:.28em;}
 .sect-head .en{font-family:var(--serif-en);font-style:italic;font-size:13.5px;color:var(--accent);white-space:nowrap;}
