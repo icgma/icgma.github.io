@@ -135,6 +135,13 @@ section.block{padding:clamp(40px,5.5vw,60px) 0 6px;}
 }
 .entry-list .repo-link{font-family:var(--mono);font-size:11px;text-decoration:none;color:var(--accent);border-bottom:1px dotted var(--accent);}
 .entry-list .repo-link:hover{border-bottom-style:solid;}
+.entry-list .live-chip{
+  display:inline-block;font-size:11px;font-weight:600;
+  color:var(--paper);background:var(--accent);
+  border-radius:2px;padding:1px 9px;letter-spacing:.1em;line-height:1.8;
+  text-decoration:none;transition:background .16s;
+}
+.entry-list .live-chip:hover{background:var(--accent-deep);}
 .entry-list p{font-size:14px;color:var(--ink-soft);text-align:justify;margin-top:8px;}
 .entry-list .stack{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);margin-top:9px;}
 .entry-list .stack i{font-style:normal;color:var(--hairline-dark);margin:0 5px;}
