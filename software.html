@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-title-zh="软件 · icgma" data-title-en="Software · icgma">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="icgma 的软件 — AI 教研中枢、NPF 政策叙事平台、Slide Skill、新闻人工具箱、媒体可信度评分、技能库">
+<title>软件 · icgma</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='6' width='52' height='52' rx='6' fill='%23a83a2a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23faf7f1' text-anchor='middle' font-weight='bold'%3Eic%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="zh">
+
+<div class="topbar"></div>
+
+<nav class="sitenav">
+  <div class="inner">
+    <a class="brand" href="index.html">icgma</a>
+    <div class="links">
+      <a href="index.html" data-page="index.html"><span class="lzh">关于</span><span class="len">About</span></a>
+      <a href="courses.html" data-page="courses.html"><span class="lzh">课程</span><span class="len">Courses</span></a>
+      <a href="software.html" class="active" data-page="software.html"><span class="lzh">软件</span><span class="len">Software</span></a>
+      <a href="working.html" data-page="working.html"><span class="lzh">进行中</span><span class="len">Working</span></a>
+      <a href="resources.html" data-page="resources.html"><span class="lzh">资源</span><span class="len">Resources</span></a>
+      <button id="langBtn" type="button" title="Switch language">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section class="block">
+    <div class="sect-head reveal">
+      <span class="zh"><span class="lzh">软件</span><span class="len">Software</span></span>
+      <span class="en"><span class="lzh">Software &amp; Tools</span><span class="len">软件</span></span>
+    </div>
+    <ul class="entry-list reveal">
+      <li>
+        <div class="e-head">
+          <span class="e-title"><a href="https://github.com/icgma/ai-media-teaching-hub"><span class="lzh">传媒 AI 教研智能中枢</span><span class="len">AI Media Teaching Hub</span></a></span>
+          <span class="role"><span class="lzh">独立设计与开发</span><span class="len">Solo</span></span>
+        </div>
+        <p><span class="lzh">传媒课程的智能教研与学情分析平台：教师端学情诊断仪表盘、RAG 课程问答与教案生成；学生端 AI 学习助手、CRISPE 提示词教练与伦理沙盒。Docker 一键部署。</span><span class="len">A teaching-and-learning hub for media courses: learning-analytics dashboards, RAG course Q&amp;A and lesson-plan generation for teachers; AI study assistant, CRISPE prompt coach and ethics sandbox for students. One docker compose up.</span></p>
+        <div class="stack">Next.js 15<i>/</i>FastAPI<i>/</i>RAG<i>/</i>Docker</div>
+      </li>
+      <li>
+        <div class="e-head">
+          <span class="e-title"><a href="https://github.com/icgma/npf-policy-narrative-analysis"><span class="lzh">政策叙事分析平台（NPF）</span><span class="len">NPF Policy Narrative Platform</span></a></span>
+          <span class="role"><span class="lzh">方法论 × 工程</span><span class="len">Methods × engineering</span></span>
+        </div>
+        <p><span class="lzh">按 30 个二元叙事变量编码政策文本（Shanahan, Jones &amp; McBeth 2018 方法论），LLM 辅助编码 + 专家标注 + Kappa / α / F1 出版级信度统计闭环。</span><span class="len">Codes policy texts on 30 binary narrative variables (Shanahan, Jones &amp; McBeth 2018), with a closed loop of LLM-assisted coding, expert annotation and publication-grade Kappa / α / F1 reliability statistics.</span></p>
+        <div class="stack">Python<i>/</i>Flask<i>/</i>LLM coding<i>/</i>reliability stats</div>
+      </li>
+      <li>
+        <div class="e-head">
+          <span class="e-title"><a href="https://github.com/icgma/slide-skill">Slide Skill</a></span>
+          <span class="role"><span class="lzh">独立开发 · MIT</span><span class="len">Solo · MIT</span></span>
+        </div>
+        <p><span class="lzh">SVG 优先的幻灯片生成工具链：PDF / Markdown / DOCX / URL 进，可编辑 PPTX 出；900+ 自动化测试。</span><span class="len">An SVG-first slide generation toolkit: PDF / Markdown / DOCX / URL in, editable PPTX out; 900+ automated tests.</span></p>
+        <div class="stack">Python<i>/</i>SVG<i>/</i>python-pptx</div>
+      </li>
+      <li>
+        <div class="e-head">
+          <span class="e-title"><a href="https://github.com/icgma/newsroom-kit"><span class="lzh">新闻人工具箱</span><span class="len">Newsroom Kit</span></a></span>
+          <span class="role"><span class="lzh">独立开发</span><span class="len">Solo</span></span>
+        </div>
+        <p><span class="lzh">13 个零构建、零后端、零上传的纯前端新闻实务工具（p 值计算、访谈稿匿名化、引文互转、CSV 清洗等），计算全部留在浏览器本地。</span><span class="len">Thirteen zero-build, zero-backend, zero-upload browser tools for newsroom work — p-values, interview redaction, citation conversion, CSV cleanup — all computed locally.</span></p>
+        <div class="stack">Vanilla JS<i>/</i>GitHub Pages<i>/</i>privacy-first</div>
+      </li>
+      <li>
+        <div class="e-head">
+          <span class="e-title"><a href="https://github.com/icgma/media-credibility-web"><span class="lzh">媒体可信度评分系统</span><span class="len">Media Credibility Scorer</span></a></span>
+          <span class="role"><span class="lzh">独立开发</span><span class="len">Solo</span></span>
+        </div>
+        <p><span class="lzh">纯前端的媒体可信度评估：单项与 JSON 批量评分、实时统计、Chart.js 可视化，离线可用。</span><span class="len">A fully front-end credibility scorer: single and batch rating, live statistics, Chart.js visuals, works offline.</span></p>
+        <div class="stack">JavaScript<i>/</i>Chart.js</div>
+      </li>
+      <li>
+        <div class="e-head">
+          <span class="e-title"><a href="https://github.com/icgma/skill-kit"><span class="lzh">技能库 Skill Kit</span><span class="len">Skill Kit</span></a></span>
+          <span class="role"><span class="lzh">独立开发</span><span class="len">Solo</span></span>
+        </div>
+        <p><span class="lzh">面向 AI Agent 的技能库站点：192 份中英双语技能文档，AES-256-GCM 静态加密 + 口令门禁，离线极速检索。</span><span class="len">A skill-library site for AI agents: 192 bilingual documents, AES-256-GCM encryption at build time with a passphrase gate, instant offline search.</span></p>
+        <div class="stack">Python<i>/</i>Web Crypto<i>/</i>GitHub Pages</div>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="colophon">
+    <span>icgma</span>
+    <span><a href="https://github.com/icgma">github.com/icgma</a> · 2026</span>
+  </footer>
+
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

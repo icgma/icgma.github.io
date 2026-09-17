@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-title-zh="资源 · icgma" data-title-en="Resources · icgma">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="icgma 的资源 — 13 个零上传的浏览器小工具与可复现的课堂演示项目">
+<title>资源 · icgma</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='6' width='52' height='52' rx='6' fill='%23a83a2a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23faf7f1' text-anchor='middle' font-weight='bold'%3Eic%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="zh">
+
+<div class="topbar"></div>
+
+<nav class="sitenav">
+  <div class="inner">
+    <a class="brand" href="index.html">icgma</a>
+    <div class="links">
+      <a href="index.html" data-page="index.html"><span class="lzh">关于</span><span class="len">About</span></a>
+      <a href="courses.html" data-page="courses.html"><span class="lzh">课程</span><span class="len">Courses</span></a>
+      <a href="software.html" data-page="software.html"><span class="lzh">软件</span><span class="len">Software</span></a>
+      <a href="working.html" data-page="working.html"><span class="lzh">进行中</span><span class="len">Working</span></a>
+      <a href="resources.html" class="active" data-page="resources.html"><span class="lzh">资源</span><span class="len">Resources</span></a>
+      <button id="langBtn" type="button" title="Switch language">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section class="block">
+    <div class="sect-head reveal">
+      <span class="zh"><span class="lzh">资源</span><span class="len">Resources</span></span>
+      <span class="en"><span class="lzh">Resources — 在线即用</span><span class="len">在线即用 · live</span></span>
+    </div>
+    <p class="sect-note reveal">
+      <span class="lzh">13 个新闻实务小工具，零上传、打开即用，源自 </span>
+      <span class="len">Thirteen newsroom tools — zero upload, ready on open, from </span>
+      <a href="https://github.com/icgma/newsroom-kit">icgma/newsroom-kit</a><span class="lzh"> 及配套仓库。</span><span class="len"> and companion repos.</span>
+    </p>
+    <div class="tools reveal">
+      <a class="tool" href="https://icgma.github.io/newsroom-kit/pvalue/">
+        <div class="t-name">pvalue <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">t / F / χ² / r → p 值、效应量、置信区间；反向功效分析</span><span class="len">t / F / χ² / r → p-values, effect sizes, CIs; power analysis</span></div>
+        <div class="t-src">from newsroom-kit</div>
+      </a>
+      <a class="tool" href="https://icgma.github.io/newsroom-kit/redact/">
+        <div class="t-name">redact <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">访谈稿匿名化：自动识别 + 逐项复核 + 替换映射表</span><span class="len">Interview redaction with review &amp; mapping export</span></div>
+        <div class="t-src">from newsroom-kit</div>
+      </a>
+      <a class="tool" href="https://icgma.github.io/newsroom-kit/citecheck/">
+        <div class="t-name">citecheck <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">BibTeX / RIS / APA / Chicago / MLA / GB/T 7714 互转</span><span class="len">Citation conversion across BibTeX / RIS / APA / Chicago / MLA / GB/T 7714</span></div>
+        <div class="t-src">from newsroom-kit</div>
+      </a>
+      <a class="tool" href="https://icgma.github.io/newsroom-kit/scipdf/">
+        <div class="t-name">scipdf <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">论文 PDF → 题录与 BibTeX / CSL-JSON</span><span class="len">Paper PDF → metadata &amp; BibTeX / CSL-JSON</span></div>
+        <div class="t-src">from newsroom-kit</div>
+      </a>
+      <a class="tool" href="https://icgma.github.io/newsroom-kit/bibfix/">
+        <div class="t-name">bibfix <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">参考文献修复：DOI、页码、年份、中文人名、全大写标题</span><span class="len">BibTeX/RIS repair: DOIs, pages, years, Chinese names</span></div>
+        <div class="t-src">from newsroom-kit</div>
+      </a>
+      <a class="tool" href="https://icgma.github.io/newsroom-kit/tidy/">
+        <div class="t-name">tidy <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">清稿：零宽字符、全角、空白、标点一次理顺</span><span class="len">Manuscript cleanup: zero-width, fullwidth, punctuation</span></div>
+        <div class="t-src">from newsroom-kit</div>
+      </a>
+      <a class="tool" href="https://icgma.github.io/newsroom-kit/diffmark/">
+        <div class="t-name">diffmark <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">两段稿逐字对照：改稿、审稿、批改</span><span class="len">Word-by-word draft comparison</span></div>
+        <div class="t-src">from newsroom-kit</div>
+      </a>
+      <a class="tool" href="https://icgma.github.io/newsroom-kit/csvclean/">
+        <div class="t-name">csvclean <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">CSV 体检：编码、分隔符、空列、重复行</span><span class="len">CSV health check: encoding, delimiters, empties, duplicates</span></div>
+        <div class="t-src">from newsroom-kit</div>
+      </a>
+      <a class="tool" href="https://icgma.github.io/newsroom-kit/imgshrink/">
+        <div class="t-name">imgshrink <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">本地压图：JPEG / WebP，重绘去 EXIF</span><span class="len">Local image compression, EXIF stripped</span></div>
+        <div class="t-src">from newsroom-kit</div>
+      </a>
+      <a class="tool" href="https://icgma.github.io/s2t/">
+        <div class="t-name">s2t <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">简繁转换：台湾 / 香港 / 通用，标出改动</span><span class="len">Simplified ↔ Traditional Chinese, changes marked</span></div>
+        <div class="t-src">icgma/s2t</div>
+      </a>
+      <a class="tool" href="https://icgma.github.io/textstats/">
+        <div class="t-name">textstats <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">字数与可读性：时长估算、长句与重复用词</span><span class="len">Word count &amp; readability, long sentences flagged</span></div>
+        <div class="t-src">icgma/textstats</div>
+      </a>
+      <a class="tool" href="https://icgma.github.io/timezone/">
+        <div class="t-name">timezone <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">外媒发稿时间换算，含夏令时</span><span class="len">Filing-time conversion, DST included</span></div>
+        <div class="t-src">icgma/timezone</div>
+      </a>
+      <a class="tool" href="https://icgma.github.io/codec/">
+        <div class="t-name">codec <span class="go">→</span></div>
+        <div class="t-desc"><span class="lzh">编解码：Base64 / URL / Hex / SHA / JWT</span><span class="len">Base64 / URL / Hex / SHA / JWT</span></div>
+        <div class="t-src">icgma/codec</div>
+      </a>
+    </div>
+    <ul class="demo-list reveal">
+      <li><a href="https://github.com/icgma/douban-top250"><span class="lzh">豆瓣 Top250 爬虫 + 可视化仪表盘</span><span class="len">Douban Top250 scraper + dashboard</span></a><span class="d-desc"> — Web Scraping</span></li>
+      <li><a href="https://github.com/icgma/douban-top250-advanced"><span class="lzh">异步爬虫 + 统计分析 pipeline</span><span class="len">Async scraper + statistics pipeline</span></a><span class="d-desc"> — advanced</span></li>
+      <li><a href="https://github.com/icgma/new-media-curriculum-navigator"><span class="lzh">网络与新媒体课程导航</span><span class="len">New-media curriculum navigator</span></a><span class="d-desc"> — <span class="lzh">培养方案可视化</span><span class="len">curriculum visualization</span></span></li>
+    </ul>
+  </section>
+
+  <footer class="colophon">
+    <span>icgma</span>
+    <span><a href="https://github.com/icgma">github.com/icgma</a> · 2026</span>
+  </footer>
+
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

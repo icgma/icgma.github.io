@@ -1,206 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-title-zh="关于 · icgma" data-title-en="About · icgma">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="icgma · 计算社会科学研究者 Computational Social Scientist — 课程、软件与资源 · 香港大学">
-<title>icgma · 个人网站</title>
+<meta name="description" content="icgma · 计算社会科学研究者 Computational Social Scientist — 关于、课程、软件与资源 · 香港大学">
+<title>关于 · icgma</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='6' width='52' height='52' rx='6' fill='%23a83a2a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23faf7f1' text-anchor='middle' font-weight='bold'%3Eic%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#faf7f1;
-    --paper-2:#f2ede2;
-    --ink:#211d18;
-    --ink-soft:#5c544a;
-    --ink-faint:#8a8073;
-    --hairline:#d6cdbc;
-    --hairline-dark:#b3a891;
-    --accent:#a83a2a;
-    --accent-deep:#8c2f22;
-    --serif-cn:"Noto Serif SC","Source Han Serif SC","SimSun",serif;
-    --serif-en:"EB Garamond","Georgia","Times New Roman",serif;
-    --mono:"IBM Plex Mono","Consolas",monospace;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:var(--serif-cn);
-    color:var(--ink);
-    background:var(--paper);
-    line-height:1.8;
-    font-size:16px;
-    overflow-x:hidden;
-  }
-  body::before{
-    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
-    background:
-      repeating-linear-gradient(0deg, rgba(120,105,80,.022) 0 1px, transparent 1px 3.4em),
-      radial-gradient(ellipse at 18% -5%, rgba(168,58,42,.045), transparent 42%),
-      radial-gradient(ellipse at 105% 100%, rgba(120,105,80,.07), transparent 46%);
-  }
-  ::selection{background:rgba(168,58,42,.18);}
-  a{color:var(--accent-deep);}
-  .wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:0 clamp(20px,4vw,56px);}
-
-  .len{display:none;}
-  body.en .lzh{display:none;}
-  body.en .len{display:inline;}
-
-  .topbar{height:7px;background:var(--accent);}
-  .topbar::after{content:"";display:block;height:1px;background:var(--ink);margin-top:2px;}
-
-  /* ============ 顶栏导航 ============ */
-  .sitenav{
-    position:sticky;top:0;z-index:50;
-    background:rgba(250,247,241,.93);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--hairline-dark);
-  }
-  .sitenav .inner{
-    max-width:980px;margin:0 auto;padding:12px clamp(20px,4vw,56px);
-    display:flex;align-items:center;gap:22px;flex-wrap:wrap;
-  }
-  .sitenav .brand{
-    font-family:var(--serif-en);
-    font-size:21px;font-weight:600;letter-spacing:.01em;
-    text-decoration:none;color:var(--ink);
-  }
-  .sitenav .brand:hover{color:var(--accent-deep);}
-  .sitenav .links{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;}
-  .sitenav .links a{
-    text-decoration:none;color:var(--ink-soft);
-    font-size:14px;letter-spacing:.12em;
-    padding:5px 12px;border-radius:2px;
-    transition:background .16s,color .16s;
-  }
-  .sitenav .links a:hover{background:var(--ink);color:var(--paper);}
-  .sitenav .links button{
-    font-family:var(--serif-en);font-style:italic;
-    font-size:14px;letter-spacing:.08em;cursor:pointer;
-    color:var(--accent-deep);background:none;
-    border:1px solid var(--hairline-dark);border-radius:2px;
-    padding:3px 12px;margin-left:6px;
-  }
-  .sitenav .links button:hover{background:var(--accent);border-color:var(--accent);color:var(--paper);}
-
-  /* ============ 通用栏目 ============ */
-  section.block{padding:clamp(34px,5vw,54px) 0 6px;}
-  #about{padding-top:clamp(44px,6vw,68px);}
-  .sect-head{
-    display:flex;align-items:baseline;gap:14px;
-    border-top:2.5px solid var(--ink);
-    padding-top:10px;margin-bottom:24px;
-  }
-  .sect-head .zh{font-size:clamp(19px,2.4vw,23px);font-weight:900;letter-spacing:.28em;}
-  .sect-head .en{font-family:var(--serif-en);font-style:italic;font-size:13.5px;color:var(--accent);white-space:nowrap;}
-  .sect-head::after{content:"";flex:1;border-bottom:1px dotted var(--hairline-dark);transform:translateY(-5px);}
-
-  /* ============ 关于 ============ */
-  .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:46px;}
-  .about-grid .bio p{font-size:15px;color:var(--ink-soft);text-align:justify;}
-  .about-grid .bio p + p{margin-top:10px;}
-  .about-grid .bio b{color:var(--ink);font-weight:600;}
-  .vita-line{margin-top:18px;font-family:var(--serif-en);font-style:italic;font-size:14.5px;}
-  .vita-line a{text-decoration:none;border-bottom:1px dotted var(--accent);}
-  .vita-line a:hover{border-bottom-style:solid;}
-  .side-box{margin-bottom:26px;}
-  .side-box:last-child{margin-bottom:0;}
-  .side-box h3{
-    font-size:13.5px;font-weight:900;letter-spacing:.26em;
-    border-bottom:1.5px solid var(--ink);padding-bottom:6px;margin-bottom:12px;
-    display:flex;justify-content:space-between;align-items:baseline;
-  }
-  .side-box h3 .en{font-family:var(--serif-en);font-style:italic;font-weight:400;font-size:11px;color:var(--accent);letter-spacing:.05em;}
-  .interest{font-size:14px;color:var(--ink-soft);margin-bottom:7px;padding-left:14px;position:relative;}
-  .interest::before{content:"·";position:absolute;left:2px;color:var(--accent);font-weight:900;}
-  .edu-item{margin-bottom:12px;}
-  .edu-item .school{font-size:15px;font-weight:700;}
-  .edu-item .deg{font-size:12.5px;color:var(--ink-soft);margin-top:2px;}
-  .edu-item .deg .en{font-family:var(--serif-en);font-style:italic;}
-
-  /* ============ 列表条目（课程/软件/进行中） ============ */
-  .entry-list{list-style:none;}
-  .entry-list > li{
-    border-top:1px solid var(--hairline-dark);
-    padding:20px 0 22px;position:relative;
-  }
-  .entry-list > li::before{
-    content:"";position:absolute;top:-1px;left:0;width:0;height:1px;
-    background:var(--accent);transition:width .5s cubic-bezier(.2,.7,.2,1);
-  }
-  .entry-list > li:hover::before{width:100%;}
-  .entry-list .e-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:9px;}
-  .entry-list .e-title{font-size:16.5px;font-weight:700;}
-  .entry-list .e-title a{text-decoration:none;color:inherit;border-bottom:2px solid transparent;transition:border-color .16s;}
-  .entry-list .e-title a:hover{border-bottom-color:var(--accent);}
-  .entry-list .e-meta{font-family:var(--mono);font-size:11px;color:var(--ink-faint);}
-  .entry-list .role{
-    display:inline-block;font-size:11px;color:var(--ink-faint);
-    border:1px solid var(--hairline-dark);border-radius:2px;padding:0 8px;letter-spacing:.1em;line-height:1.8;
-  }
-  .entry-list .repo-link{font-family:var(--mono);font-size:11px;text-decoration:none;color:var(--accent);border-bottom:1px dotted var(--accent);}
-  .entry-list .repo-link:hover{border-bottom-style:solid;}
-  .entry-list p{font-size:14px;color:var(--ink-soft);text-align:justify;margin-top:8px;}
-  .entry-list .stack{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);margin-top:9px;}
-  .entry-list .stack i{font-style:normal;color:var(--hairline-dark);margin:0 5px;}
-
-  /* ============ 资源：工具网格 ============ */
-  .res-note{font-size:13.5px;color:var(--ink-faint);margin:-8px 0 20px;}
-  .res-note a{font-family:var(--mono);font-size:12px;text-decoration:none;border-bottom:1px dotted var(--accent);}
-  .tools{
-    display:grid;grid-template-columns:repeat(3,1fr);
-    border-top:1px solid var(--hairline-dark);
-    border-left:1px solid var(--hairline);
-  }
-  .tool{
-    display:block;text-decoration:none;color:inherit;
-    border-right:1px solid var(--hairline);
-    border-bottom:1px solid var(--hairline);
-    padding:17px 20px 15px;transition:background .16s;
-  }
-  .tool:hover{background:rgba(168,58,42,.05);}
-  .tool .t-name{font-family:var(--mono);font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px;}
-  .tool .t-name .go{margin-left:auto;font-family:var(--serif-en);color:var(--accent);opacity:0;transform:translate(-5px,2px);transition:all .2s;}
-  .tool:hover .t-name .go{opacity:1;transform:translate(0,2px);}
-  .tool .t-desc{font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.65;}
-  .tool .t-src{font-family:var(--serif-en);font-style:italic;font-size:10px;color:var(--ink-faint);margin-top:7px;}
-  .demo-list{list-style:none;margin-top:26px;}
-  .demo-list li{position:relative;padding-left:16px;font-size:13.5px;color:var(--ink-soft);margin-bottom:7px;}
-  .demo-list li::before{content:"—";position:absolute;left:0;color:var(--accent);font-family:var(--serif-en);}
-  .demo-list a{text-decoration:none;border-bottom:1px dotted var(--accent);}
-  .demo-list a:hover{border-bottom-style:solid;}
-  .demo-list .d-desc{color:var(--ink-faint);font-size:12px;}
-
-  /* ============ 页脚 ============ */
-  .colophon{
-    margin-top:clamp(48px,6vw,72px);
-    border-top:3px double var(--ink);
-    padding:16px 0 42px;
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
-    font-family:var(--serif-en);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);
-  }
-  .colophon a{color:var(--accent-deep);text-decoration:none;font-family:var(--mono);letter-spacing:.04em;}
-  .colophon a:hover{border-bottom:1px dotted var(--accent);}
-
-  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);}
-  .reveal.in{opacity:1;transform:none;}
-  @media (prefers-reduced-motion:reduce){
-    .reveal{opacity:1;transform:none;transition:none;}
-  }
-
-  @media (max-width:820px){
-    .about-grid{grid-template-columns:1fr;gap:30px;}
-    .tools{grid-template-columns:1fr 1fr;}
-  }
-  @media (max-width:600px){
-    .tools{grid-template-columns:1fr;}
-    .sitenav .links{margin-left:0;}
-    .sitenav .links a{padding:5px 8px;font-size:13px;letter-spacing:.05em;}
-  }
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="zh">
 
@@ -208,13 +17,13 @@
 
 <nav class="sitenav">
   <div class="inner">
-    <a class="brand" href="#top">icgma</a>
+    <a class="brand" href="index.html">icgma</a>
     <div class="links">
-      <a href="#about"><span class="lzh">关于</span><span class="len">About</span></a>
-      <a href="#courses"><span class="lzh">课程</span><span class="len">Courses</span></a>
-      <a href="#software"><span class="lzh">软件</span><span class="len">Software</span></a>
-      <a href="#working"><span class="lzh">进行中</span><span class="len">Working</span></a>
-      <a href="#resources"><span class="lzh">资源</span><span class="len">Resources</span></a>
+      <a href="index.html" class="active" data-page="index.html"><span class="lzh">关于</span><span class="len">About</span></a>
+      <a href="courses.html" data-page="courses.html"><span class="lzh">课程</span><span class="len">Courses</span></a>
+      <a href="software.html" data-page="software.html"><span class="lzh">软件</span><span class="len">Software</span></a>
+      <a href="working.html" data-page="working.html"><span class="lzh">进行中</span><span class="len">Working</span></a>
+      <a href="resources.html" data-page="resources.html"><span class="lzh">资源</span><span class="len">Resources</span></a>
       <button id="langBtn" type="button" title="Switch language">EN</button>
     </div>
   </div>
@@ -222,8 +31,7 @@
 
 <div class="wrap" id="top">
 
-  <!-- ================= 关于 ================= -->
-  <section class="block" id="about">
+  <section class="block">
     <div class="sect-head reveal">
       <span class="zh"><span class="lzh">关于</span><span class="len">About</span></span>
       <span class="en"><span class="lzh">About</span><span class="len">关于</span></span>
@@ -261,203 +69,6 @@
     </div>
   </section>
 
-  <!-- ================= 课程 ================= -->
-  <section class="block" id="courses">
-    <div class="sect-head reveal">
-      <span class="zh"><span class="lzh">课程</span><span class="len">Courses</span></span>
-      <span class="en"><span class="lzh">Courses</span><span class="len">课程</span></span>
-    </div>
-    <ul class="entry-list reveal">
-      <li>
-        <div class="e-head">
-          <span class="e-title"><span class="lzh">智能传媒制作 ——《AI 驱动的传媒内容制作》</span><span class="len">Intelligent Media Production — AI-Driven Media Content Production</span></span>
-          <span class="e-meta">JOU2327A</span>
-          <a class="repo-link" href="https://github.com/icgma/cpnm-ai-comm-practice">icgma/cpnm-ai-comm-practice</a>
-        </div>
-        <p><span class="lzh">本科专业课。从提示词工程到 AI 图文、音视频生产的全链路实操；课程门户以 GitHub Pages 持续交付，课件、任务与作品全部在线。</span><span class="len">Undergraduate elective. A hands-on course running the full pipeline from prompt engineering to AI-generated text, audio and video; the portal ships continuously via GitHub Pages.</span></p>
-      </li>
-      <li>
-        <div class="e-head">
-          <span class="e-title"><span class="lzh">编程基础 ——《基础编程（AI 编程与 Python 基础）》</span><span class="len">Intro Programming — AI Coding &amp; Python Basics</span></span>
-          <a class="repo-link" href="https://github.com/icgma/basic-programming">icgma/basic-programming</a>
-        </div>
-        <p><span class="lzh">本科专业基础课。面向零基础新闻传播学生，Python 基础与 AI 辅助编程并重；结课要求独立完成一次从数据采集到可视化的完整报道。</span><span class="len">Undergraduate core course. Programming for zero-background journalism students — Python fundamentals side by side with AI-assisted coding; the final requirement is one complete data story.</span></p>
-      </li>
-    </ul>
-  </section>
-
-  <!-- ================= 软件 ================= -->
-  <section class="block" id="software">
-    <div class="sect-head reveal">
-      <span class="zh"><span class="lzh">软件</span><span class="len">Software</span></span>
-      <span class="en"><span class="lzh">Software &amp; Tools</span><span class="len">软件</span></span>
-    </div>
-    <ul class="entry-list reveal">
-      <li>
-        <div class="e-head">
-          <span class="e-title"><a href="https://github.com/icgma/ai-media-teaching-hub"><span class="lzh">传媒 AI 教研智能中枢</span><span class="len">AI Media Teaching Hub</span></a></span>
-          <span class="role"><span class="lzh">独立设计与开发</span><span class="len">Solo</span></span>
-        </div>
-        <p><span class="lzh">传媒课程的智能教研与学情分析平台：教师端学情诊断仪表盘、RAG 课程问答与教案生成；学生端 AI 学习助手、CRISPE 提示词教练与伦理沙盒。Docker 一键部署。</span><span class="len">A teaching-and-learning hub for media courses: learning-analytics dashboards, RAG course Q&amp;A and lesson-plan generation for teachers; AI study assistant, CRISPE prompt coach and ethics sandbox for students. One docker compose up.</span></p>
-        <div class="stack">Next.js 15<i>/</i>FastAPI<i>/</i>RAG<i>/</i>Docker</div>
-      </li>
-      <li>
-        <div class="e-head">
-          <span class="e-title"><a href="https://github.com/icgma/npf-policy-narrative-analysis"><span class="lzh">政策叙事分析平台（NPF）</span><span class="len">NPF Policy Narrative Platform</span></a></span>
-          <span class="role"><span class="lzh">方法论 × 工程</span><span class="len">Methods × engineering</span></span>
-        </div>
-        <p><span class="lzh">按 30 个二元叙事变量编码政策文本（Shanahan, Jones &amp; McBeth 2018 方法论），LLM 辅助编码 + 专家标注 + Kappa / α / F1 出版级信度统计闭环。</span><span class="len">Codes policy texts on 30 binary narrative variables (Shanahan, Jones &amp; McBeth 2018), with a closed loop of LLM-assisted coding, expert annotation and publication-grade Kappa / α / F1 reliability statistics.</span></p>
-        <div class="stack">Python<i>/</i>Flask<i>/</i>LLM coding<i>/</i>reliability stats</div>
-      </li>
-      <li>
-        <div class="e-head">
-          <span class="e-title"><a href="https://github.com/icgma/slide-skill">Slide Skill</a></span>
-          <span class="role"><span class="lzh">独立开发 · MIT</span><span class="len">Solo · MIT</span></span>
-        </div>
-        <p><span class="lzh">SVG 优先的幻灯片生成工具链：PDF / Markdown / DOCX / URL 进，可编辑 PPTX 出；900+ 自动化测试。</span><span class="len">An SVG-first slide generation toolkit: PDF / Markdown / DOCX / URL in, editable PPTX out; 900+ automated tests.</span></p>
-        <div class="stack">Python<i>/</i>SVG<i>/</i>python-pptx</div>
-      </li>
-      <li>
-        <div class="e-head">
-          <span class="e-title"><a href="https://github.com/icgma/newsroom-kit"><span class="lzh">新闻人工具箱</span><span class="len">Newsroom Kit</span></a></span>
-          <span class="role"><span class="lzh">独立开发</span><span class="len">Solo</span></span>
-        </div>
-        <p><span class="lzh">13 个零构建、零后端、零上传的纯前端新闻实务工具（p 值计算、访谈稿匿名化、引文互转、CSV 清洗等），计算全部留在浏览器本地。</span><span class="len">Thirteen zero-build, zero-backend, zero-upload browser tools for newsroom work — p-values, interview redaction, citation conversion, CSV cleanup — all computed locally.</span></p>
-        <div class="stack">Vanilla JS<i>/</i>GitHub Pages<i>/</i>privacy-first</div>
-      </li>
-      <li>
-        <div class="e-head">
-          <span class="e-title"><a href="https://github.com/icgma/media-credibility-web"><span class="lzh">媒体可信度评分系统</span><span class="len">Media Credibility Scorer</span></a></span>
-          <span class="role"><span class="lzh">独立开发</span><span class="len">Solo</span></span>
-        </div>
-        <p><span class="lzh">纯前端的媒体可信度评估：单项与 JSON 批量评分、实时统计、Chart.js 可视化，离线可用。</span><span class="len">A fully front-end credibility scorer: single and batch rating, live statistics, Chart.js visuals, works offline.</span></p>
-        <div class="stack">JavaScript<i>/</i>Chart.js</div>
-      </li>
-      <li>
-        <div class="e-head">
-          <span class="e-title"><a href="https://github.com/icgma/skill-kit"><span class="lzh">技能库 Skill Kit</span><span class="len">Skill Kit</span></a></span>
-          <span class="role"><span class="lzh">独立开发</span><span class="len">Solo</span></span>
-        </div>
-        <p><span class="lzh">面向 AI Agent 的技能库站点：192 份中英双语技能文档，AES-256-GCM 静态加密 + 口令门禁，离线极速检索。</span><span class="len">A skill-library site for AI agents: 192 bilingual documents, AES-256-GCM encryption at build time with a passphrase gate, instant offline search.</span></p>
-        <div class="stack">Python<i>/</i>Web Crypto<i>/</i>GitHub Pages</div>
-      </li>
-    </ul>
-  </section>
-
-  <!-- ================= 进行中 ================= -->
-  <section class="block" id="working">
-    <div class="sect-head reveal">
-      <span class="zh"><span class="lzh">进行中</span><span class="len">Working</span></span>
-      <span class="en"><span class="lzh">Work in Progress</span><span class="len">进行中</span></span>
-    </div>
-    <ul class="entry-list reveal">
-      <li>
-        <div class="e-head">
-          <span class="e-title"><span class="lzh">NPF 平台的信度工作流完善</span><span class="len">Refining the NPF reliability workflow</span></span>
-        </div>
-        <p><span class="lzh">补齐人机一致性检验的细节：分维度 Kappa、Krippendorff's α 与 F1 的对比报告，以及标注界面的多人复核流程。</span><span class="len">Completing the human–machine agreement details: per-dimension Kappa, Krippendorff's α and F1 comparison reports, plus a multi-reviewer annotation flow.</span></p>
-      </li>
-      <li>
-        <div class="e-head">
-          <span class="e-title"><span class="lzh">课程材料开源化</span><span class="len">Open-sourcing course materials</span></span>
-        </div>
-        <p><span class="lzh">把两门课的课件、作业与数据演示逐步整理成可复现的公开仓库，学生可课后一条命令复现。</span><span class="len">Turning slides, assignments and data demos into open, reproducible repos that students can rerun after class with a single command.</span></p>
-      </li>
-      <li>
-        <div class="e-head">
-          <span class="e-title"><span class="lzh">新闻人工具箱持续维护</span><span class="len">Maintaining the newsroom toolbox</span></span>
-        </div>
-        <p><span class="lzh">13 个浏览器小工具的日常迭代与 bug 修复，保持零上传承诺。</span><span class="len">Day-to-day iteration and bug fixes across the 13 browser tools, keeping the zero-upload promise.</span></p>
-      </li>
-    </ul>
-  </section>
-
-  <!-- ================= 资源 ================= -->
-  <section class="block" id="resources">
-    <div class="sect-head reveal">
-      <span class="zh"><span class="lzh">资源</span><span class="len">Resources</span></span>
-      <span class="en"><span class="lzh">Resources — 在线即用</span><span class="len">在线即用 · live</span></span>
-    </div>
-    <p class="res-note reveal">
-      <span class="lzh">13 个新闻实务小工具，零上传、打开即用，源自 </span>
-      <span class="len">Thirteen newsroom tools — zero upload, ready on open, from </span>
-      <a href="https://github.com/icgma/newsroom-kit">icgma/newsroom-kit</a><span class="lzh"> 及配套仓库。</span><span class="len"> and companion repos.</span>
-    </p>
-    <div class="tools reveal">
-      <a class="tool" href="https://icgma.github.io/newsroom-kit/pvalue/">
-        <div class="t-name">pvalue <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">t / F / χ² / r → p 值、效应量、置信区间；反向功效分析</span><span class="len">t / F / χ² / r → p-values, effect sizes, CIs; power analysis</span></div>
-        <div class="t-src">from newsroom-kit</div>
-      </a>
-      <a class="tool" href="https://icgma.github.io/newsroom-kit/redact/">
-        <div class="t-name">redact <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">访谈稿匿名化：自动识别 + 逐项复核 + 替换映射表</span><span class="len">Interview redaction with review &amp; mapping export</span></div>
-        <div class="t-src">from newsroom-kit</div>
-      </a>
-      <a class="tool" href="https://icgma.github.io/newsroom-kit/citecheck/">
-        <div class="t-name">citecheck <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">BibTeX / RIS / APA / Chicago / MLA / GB/T 7714 互转</span><span class="len">Citation conversion across BibTeX / RIS / APA / Chicago / MLA / GB/T 7714</span></div>
-        <div class="t-src">from newsroom-kit</div>
-      </a>
-      <a class="tool" href="https://icgma.github.io/newsroom-kit/scipdf/">
-        <div class="t-name">scipdf <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">论文 PDF → 题录与 BibTeX / CSL-JSON</span><span class="len">Paper PDF → metadata &amp; BibTeX / CSL-JSON</span></div>
-        <div class="t-src">from newsroom-kit</div>
-      </a>
-      <a class="tool" href="https://icgma.github.io/newsroom-kit/bibfix/">
-        <div class="t-name">bibfix <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">参考文献修复：DOI、页码、年份、中文人名、全大写标题</span><span class="len">BibTeX/RIS repair: DOIs, pages, years, Chinese names</span></div>
-        <div class="t-src">from newsroom-kit</div>
-      </a>
-      <a class="tool" href="https://icgma.github.io/newsroom-kit/tidy/">
-        <div class="t-name">tidy <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">清稿：零宽字符、全角、空白、标点一次理顺</span><span class="len">Manuscript cleanup: zero-width, fullwidth, punctuation</span></div>
-        <div class="t-src">from newsroom-kit</div>
-      </a>
-      <a class="tool" href="https://icgma.github.io/newsroom-kit/diffmark/">
-        <div class="t-name">diffmark <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">两段稿逐字对照：改稿、审稿、批改</span><span class="len">Word-by-word draft comparison</span></div>
-        <div class="t-src">from newsroom-kit</div>
-      </a>
-      <a class="tool" href="https://icgma.github.io/newsroom-kit/csvclean/">
-        <div class="t-name">csvclean <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">CSV 体检：编码、分隔符、空列、重复行</span><span class="len">CSV health check: encoding, delimiters, empties, duplicates</span></div>
-        <div class="t-src">from newsroom-kit</div>
-      </a>
-      <a class="tool" href="https://icgma.github.io/newsroom-kit/imgshrink/">
-        <div class="t-name">imgshrink <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">本地压图：JPEG / WebP，重绘去 EXIF</span><span class="len">Local image compression, EXIF stripped</span></div>
-        <div class="t-src">from newsroom-kit</div>
-      </a>
-      <a class="tool" href="https://icgma.github.io/s2t/">
-        <div class="t-name">s2t <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">简繁转换：台湾 / 香港 / 通用，标出改动</span><span class="len">Simplified ↔ Traditional Chinese, changes marked</span></div>
-        <div class="t-src">icgma/s2t</div>
-      </a>
-      <a class="tool" href="https://icgma.github.io/textstats/">
-        <div class="t-name">textstats <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">字数与可读性：时长估算、长句与重复用词</span><span class="len">Word count &amp; readability, long sentences flagged</span></div>
-        <div class="t-src">icgma/textstats</div>
-      </a>
-      <a class="tool" href="https://icgma.github.io/timezone/">
-        <div class="t-name">timezone <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">外媒发稿时间换算，含夏令时</span><span class="len">Filing-time conversion, DST included</span></div>
-        <div class="t-src">icgma/timezone</div>
-      </a>
-      <a class="tool" href="https://icgma.github.io/codec/">
-        <div class="t-name">codec <span class="go">→</span></div>
-        <div class="t-desc"><span class="lzh">编解码：Base64 / URL / Hex / SHA / JWT</span><span class="len">Base64 / URL / Hex / SHA / JWT</span></div>
-        <div class="t-src">icgma/codec</div>
-      </a>
-    </div>
-    <ul class="demo-list reveal">
-      <li><a href="https://github.com/icgma/douban-top250"><span class="lzh">豆瓣 Top250 爬虫 + 可视化仪表盘</span><span class="len">Douban Top250 scraper + dashboard</span></a><span class="d-desc"> — Web Scraping</span></li>
-      <li><a href="https://github.com/icgma/douban-top250-advanced"><span class="lzh">异步爬虫 + 统计分析 pipeline</span><span class="len">Async scraper + statistics pipeline</span></a><span class="d-desc"> — advanced</span></li>
-      <li><a href="https://github.com/icgma/new-media-curriculum-navigator"><span class="lzh">网络与新媒体课程导航</span><span class="len">New-media curriculum navigator</span></a><span class="d-desc"> — <span class="lzh">培养方案可视化</span><span class="len">curriculum visualization</span></span></li>
-    </ul>
-  </section>
-
-  <!-- ================= 页脚 ================= -->
   <footer class="colophon">
     <span>icgma</span>
     <span><a href="https://github.com/icgma">github.com/icgma</a> · 2026</span>
@@ -465,41 +76,6 @@
 
 </div>
 
-<script>
-  (function(){
-    var KEY = 'icgma-lang';
-    var btn = document.getElementById('langBtn');
-    function setLang(l){
-      document.body.classList.toggle('en', l === 'en');
-      document.body.classList.toggle('zh', l !== 'en');
-      document.documentElement.lang = (l === 'en') ? 'en' : 'zh-CN';
-      document.title = (l === 'en') ? 'icgma · Personal Site' : 'icgma · 个人网站';
-      btn.textContent = (l === 'en') ? '中文' : 'EN';
-      try{ localStorage.setItem(KEY, l); }catch(e){}
-    }
-    var saved = null;
-    try{ saved = localStorage.getItem(KEY); }catch(e){}
-    if (saved === 'en') setLang('en');
-    btn.addEventListener('click', function(){
-      setLang(document.body.classList.contains('en') ? 'zh' : 'en');
-    });
-  })();
-
-  (function(){
-    var els = document.querySelectorAll('.reveal');
-    if (!('IntersectionObserver' in window) ||
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-      els.forEach(function(el){ el.classList.add('in'); });
-      return;
-    }
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, {threshold:.08, rootMargin:'0px 0px -6% 0px'});
-    els.forEach(function(el){ io.observe(el); });
-  })();
-</script>
-
+<script src="assets/site.js"></script>
 </body>
 </html>
