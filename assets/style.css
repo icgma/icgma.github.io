@@ -1,3 +1,13 @@
+/* 自托管中文子集：仅含本站实际用字 426 个，字重轴 200–900 可变。
+   站点文案改动后需重跑 tools/build-cjk-subset.py，否则新字回退到系统字体。 */
+@font-face{
+  font-family:"Noto Serif SC";
+  src:url("fonts/noto-serif-sc-subset.woff2") format("woff2-variations");
+  font-weight:200 900;
+  font-style:normal;
+  font-display:swap;
+}
+
 :root{
   --paper:#faf7f1;
   --ink:#211d18;
