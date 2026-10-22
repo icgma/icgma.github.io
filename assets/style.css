@@ -1,9 +1,8 @@
 :root{
   --paper:#faf7f1;
-  --paper-2:#f2ede2;
   --ink:#211d18;
   --ink-soft:#5c544a;
-  --ink-faint:#8a8073;
+  --ink-faint:#756b5f;
   --hairline:#d6cdbc;
   --hairline-dark:#b3a891;
   --accent:#a83a2a;
@@ -95,9 +94,6 @@ section.block{padding:clamp(40px,5.5vw,60px) 0 6px;}
 .about-grid .bio p{font-size:15px;color:var(--ink-soft);text-align:justify;}
 .about-grid .bio p + p{margin-top:10px;}
 .about-grid .bio b{color:var(--ink);font-weight:600;}
-.vita-line{margin-top:18px;font-family:var(--serif-en);font-style:italic;font-size:14.5px;}
-.vita-line a{text-decoration:none;border-bottom:1px dotted var(--accent);}
-.vita-line a:hover{border-bottom-style:solid;}
 .side-box{margin-bottom:26px;}
 .side-box:last-child{margin-bottom:0;}
 .side-box h3{
