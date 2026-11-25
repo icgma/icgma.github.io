@@ -1,4 +1,7 @@
-Copyright 2012 Google Inc. All Rights Reserved.
+Copyright 2014-2021 Adobe (http://www.adobe.com/), Google LLC (Noto Serif SC).
+Copyright 2011-2018 The EB Garamond Project Authors (https://github.com/octaviopardo/EBGaramond12).
+Copyright 2017-2023 IBM Corp. (IBM Plex Mono).
+All Rights Reserved.
 
 This Font Software is licensed under the SIL Open Font License,
 Version 1.1.

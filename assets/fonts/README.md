@@ -1,23 +1,33 @@
 # Fonts
 
-`noto-serif-sc-subset.woff2` — Noto Serif SC, subset to the site's actual text
-(426 characters, weight axis 200–900 kept). Generated from the upstream variable
-font; do not edit by hand.
+All typefaces are self-hosted WOFF2 subsets — zero requests to external CDNs:
 
-Regenerate after changing any visible copy:
+- `noto-serif-sc-subset.woff2` — Noto Serif SC variable font (`200–900`), subset
+  to the site's actual characters (HTML body, title/meta/aria attributes, and
+  `assets/site.js`).
+- `eb-garamond-latin.woff2` & `eb-garamond-italic-latin.woff2` — EB Garamond
+  variable font (`400–800`, roman & italic), subset to Latin, Greek (`α`, `χ`,
+  `κ`…), punctuation, superscripts and arrows.
+- `ibm-plex-mono-400-latin.woff2` & `ibm-plex-mono-500-latin.woff2` — IBM Plex
+  Mono (`400` & `500`), subset to the same Latin & technical symbol range.
 
-```
+Regenerate the CJK snapshot after changing any visible Chinese copy:
+
+```bash
 python tools/build-cjk-subset.py
 ```
 
-Character coverage is a snapshot. A character not in the subset falls back to
-`Source Han Serif SC` / `SimSun` / system serif, which renders noticeably
-different from the subset — if new copy looks like a different typeface, rerun
-the script.
+Rebuild both CJK and all Latin subsets from upstream sources:
 
-Latin text uses EB Garamond and IBM Plex Mono from Google Fonts, loaded
-separately in each page's `<head>`.
+```bash
+python tools/build-cjk-subset.py --all
+```
+
+A Chinese character not in the CJK subset falls back to `Source Han Serif SC` /
+`SimSun` / system serif, which renders noticeably different from the subset — if
+new copy looks like a different typeface, rerun the script.
 
 ## License
 
-Noto Serif SC is licensed under the SIL Open Font License 1.1 — see `OFL.txt`.
+Noto Serif SC, EB Garamond, and IBM Plex Mono are all licensed under the SIL
+Open Font License 1.1 — see `OFL.txt`.
