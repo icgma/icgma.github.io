@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="icgma 的软件 — AI 教研中枢、NPF 政策叙事平台、Slide Skill、新闻人工具箱、媒体可信度评分、技能库">
+<meta name="description" content="icgma 的软件 — NPF 政策叙事平台、Slide Skill、academic-report-docx、AI 教研中枢、新闻人工具箱、媒体可信度评分、技能库">
 <meta property="og:type" content="website">
 <meta property="og:title" content="软件 · icgma">
-<meta property="og:description" content="AI 教研中枢、NPF 政策叙事平台、Slide Skill、新闻人工具箱、媒体可信度评分、技能库">
+<meta property="og:description" content="NPF 政策叙事平台、Slide Skill、学术三线表 Word 编译技能、AI 教研中枢与新闻人工具箱">
 <meta property="og:url" content="https://icgma.github.io/software.html">
 <link rel="canonical" href="https://icgma.github.io/software.html">
 <title>软件 · icgma</title>
@@ -43,16 +43,9 @@
     <ul class="entry-list reveal">
       <li>
         <div class="e-head">
-          <span class="e-title"><a href="https://github.com/icgma/ai-media-teaching-hub"><span class="lzh">传媒 AI 教研智能中枢</span><span class="len">AI Media Teaching Hub</span></a></span>
-          <span class="role"><span class="lzh">独立设计与开发</span><span class="len">Solo</span></span>
-        </div>
-        <p><span class="lzh">传媒课程的智能教研与学情分析平台：教师端学情诊断仪表盘、RAG 课程问答与教案生成；学生端 AI 学习助手、CRISPE 提示词教练与伦理沙盒。Docker 一键部署。</span><span class="len">A teaching-and-learning hub for media courses: learning-analytics dashboards, RAG course Q&amp;A and lesson-plan generation for teachers; AI study assistant, CRISPE prompt coach and ethics sandbox for students. One docker compose up.</span></p>
-        <div class="stack">Next.js 15<i>/</i>FastAPI<i>/</i>RAG<i>/</i>Docker</div>
-      </li>
-      <li>
-        <div class="e-head">
           <span class="e-title"><a href="https://github.com/icgma/npf-policy-narrative-analysis"><span class="lzh">政策叙事分析平台（NPF）</span><span class="len">NPF Policy Narrative Platform</span></a></span>
           <span class="role"><span class="lzh">方法论 × 工程</span><span class="len">Methods × engineering</span></span>
+          <a class="repo-link" href="https://github.com/icgma/npf-policy-narrative-analysis">icgma/npf-policy-narrative-analysis</a>
         </div>
         <p><span class="lzh">按 30 个二元叙事变量编码政策文本（Shanahan, Jones &amp; McBeth 2018 方法论），LLM 辅助编码 + 专家标注 + Kappa / α / F1 出版级信度统计闭环。</span><span class="len">Codes policy texts on 30 binary narrative variables (Shanahan, Jones &amp; McBeth 2018), with a closed loop of LLM-assisted coding, expert annotation and publication-grade Kappa / α / F1 reliability statistics.</span></p>
         <div class="stack">Python<i>/</i>Flask<i>/</i>LLM coding<i>/</i>reliability stats</div>
@@ -61,9 +54,29 @@
         <div class="e-head">
           <span class="e-title"><a href="https://github.com/icgma/slide-skill">Slide Skill</a></span>
           <span class="role"><span class="lzh">独立开发 · MIT</span><span class="len">Solo · MIT</span></span>
+          <a class="repo-link" href="https://github.com/icgma/slide-skill">icgma/slide-skill</a>
         </div>
-        <p><span class="lzh">SVG 优先的幻灯片生成工具链：PDF / Markdown / DOCX / URL 进，可编辑 PPTX 出；900+ 自动化测试。</span><span class="len">An SVG-first slide generation toolkit: PDF / Markdown / DOCX / URL in, editable PPTX out; 900+ automated tests.</span></p>
+        <p><span class="lzh">SVG 优先的幻灯片生成工具链：PDF / Markdown / DOCX / URL 进，可编辑 PPTX 出；内置版式规划与 900+ 自动化测试。</span><span class="len">An SVG-first slide generation toolkit: PDF / Markdown / DOCX / URL in, editable PPTX out; intelligent layout planning and 900+ automated tests.</span></p>
         <div class="stack">Python<i>/</i>SVG<i>/</i>python-pptx</div>
+      </li>
+      <li>
+        <div class="e-head">
+          <span class="e-title"><a href="https://icgma.github.io/academic-report-docx/"><span class="lzh">学术汇报与三线表 Word 编译技能</span><span class="len">Academic Report DOCX</span></a></span>
+          <span class="role"><span class="lzh">独立开发 · MIT</span><span class="len">Solo · MIT</span></span>
+          <a class="live-chip" href="https://icgma.github.io/academic-report-docx/"><span class="lzh">在线 →</span><span class="len">Live →</span></a>
+          <a class="repo-link" href="https://github.com/icgma/academic-report-docx">icgma/academic-report-docx</a>
+        </div>
+        <p><span class="lzh">面向中文社科汇报的行文门禁与 OpenXML 排版引擎：拦截第一人称口语腔与 AI 套话，执行实证数字表文交叉对账，一键编译中文宋体 + 西文 Times New Roman 纯黑标准 GB/T 7713.1 三段式三线表 Word 文档，支持既有 .docx 直接重排。</span><span class="len">An objective-prose gatekeeper and OpenXML compiler for Chinese academic reports: blocks conversational drift and AI clichés, cross-verifies empirical numbers across prose and tables, and compiles pure-black SimSun + Times New Roman GB/T 7713.1 three-line-table .docx manuscripts (with --restyle support).</span></p>
+        <div class="stack">Python<i>/</i>OpenXML<i>/</i>Pandoc<i>/</i>Multi-Agent Skill</div>
+      </li>
+      <li>
+        <div class="e-head">
+          <span class="e-title"><a href="https://github.com/icgma/ai-media-teaching-hub"><span class="lzh">传媒 AI 教研智能中枢</span><span class="len">AI Media Teaching Hub</span></a></span>
+          <span class="role"><span class="lzh">独立设计与开发</span><span class="len">Solo</span></span>
+          <a class="repo-link" href="https://github.com/icgma/ai-media-teaching-hub">icgma/ai-media-teaching-hub</a>
+        </div>
+        <p><span class="lzh">传媒课程的智能教研与学情分析平台：教师端学情诊断仪表盘、RAG 课程问答与教案生成；学生端 AI 学习助手、CRISPE 提示词教练与伦理沙盒。Docker 一键部署。</span><span class="len">A teaching-and-learning hub for media courses: learning-analytics dashboards, RAG course Q&amp;A and lesson-plan generation for teachers; AI study assistant, CRISPE prompt coach and ethics sandbox for students. One docker compose up.</span></p>
+        <div class="stack">Next.js 15<i>/</i>FastAPI<i>/</i>RAG<i>/</i>Docker</div>
       </li>
       <li>
         <div class="e-head">

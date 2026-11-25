@@ -214,6 +214,14 @@ html.en .entry-list .role{font-size:12px;letter-spacing:.03em;}
 }
 html.en .entry-list .live-chip{font-size:12px;letter-spacing:.04em;}
 .entry-list .live-chip:hover{background:var(--accent-deep);}
+.entry-list .sub-chip{
+  display:inline-block;font-size:11px;color:var(--accent-deep);
+  border:1px solid var(--accent);border-radius:2px;
+  padding:0 8px;letter-spacing:.08em;line-height:1.8;
+  text-decoration:none;transition:background .16s,color .16s;
+}
+html.en .entry-list .sub-chip{font-size:12px;letter-spacing:.03em;}
+.entry-list .sub-chip:hover{background:var(--accent);color:var(--paper);}
 .entry-list p{font-size:14px;color:var(--ink-soft);text-align:justify;margin-top:8px;}
 html.en .entry-list p{font-size:16px;line-height:1.68;-webkit-hyphens:auto;hyphens:auto;}
 .entry-list .stack{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);margin-top:9px;}

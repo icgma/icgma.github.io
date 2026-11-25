@@ -7,10 +7,10 @@ icgma 的个人网站，多页面结构（真实 URL 切换 + 空闲/悬停预�
 | 页面 | 文件 | 内容 |
 |---|---|---|
 | 关于 | `index.html` | 第一人称学术自传、研究方向、教育背景 |
-| 课程 | `courses.html` | 智能传媒制作（JOU2327A）、编程基础 |
-| 软件 | `software.html` | ai-media-teaching-hub、npf-policy-narrative-analysis、slide-skill、newsroom-kit、media-credibility-web、skill-kit |
+| 课程 | `courses.html` | 智能传媒制作（JOU2327A 门户 + 16 讲加密课件库）、编程基础在线门户 |
+| 软件 | `software.html` | npf-policy-narrative-analysis、slide-skill、academic-report-docx、ai-media-teaching-hub、newsroom-kit、media-credibility-web、skill-kit |
 | 进行中 | `working.html` | NPF 信度工作流、课程材料开源化、工具箱维护 |
-| 资源 | `resources.html` | 13 个在线即用工具 + 3 个课堂演示项目 |
+| 资源 | `resources.html` | 13 个在线即用工具 + 4 个专题档案/教学门户（qiaopi-100、media-directory、NotebookLM-prompts、课程导航）+ 2 个课堂爬虫演示 |
 | 404 | `404.html` | 纸墨风兜底页（根路径引用，兼容深层失效链接） |
 
 共享资源：`assets/style.css`（纸墨视觉系统与中英分治排版）、`assets/site.js`（语言切换 / 入场动画 / 预加载）。
